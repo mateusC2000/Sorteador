@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <style>
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorteador Íris</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Sorteador Íris</h1>
+
+    <div class="card">
+      <div class="fields">
+        <!-- <div class="quantity-numbers">
+          <label>Quantidade de números sorteados</label><br>
+          <input type="number" value="1" id="quantity-numbers">
+        </div> -->
+        <div class="input-group">
+          <label>Do:</label>
+          <input type="number" value="1" id="min-number" onkeypress="return this.value.length < 1">
+        </div>
+        <div class="input-group">
+          <label>ao:</label>
+          <input type="number" value="10" id="max-number" onkeypress="return this.value.length < 3">
+        </div><br>
+        <button onclick="draw()">SORTEAR</button>
+
+        <div class="results">
+          <h2>Resultado</h2>
+          <div class="result-numbers" id="result-numbers">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  <script src="app.js"></script>
+</body>
+</html>
